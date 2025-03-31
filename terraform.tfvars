@@ -5,20 +5,22 @@ location            = "East US"
 
 vm_list = {
   "vm3" = {
-    admin_user  = "azureuser"
-    admin_pass  = "Password1234!"
-    subnet_id   = data.azurerm_subnet.subnet.id
+    admin_username  = "azureuser"
+    admin_password  = "Password1234!"
+    subnet_id   = "prod-subnet"
     vm_size     = "Standard_D2s_v3"
+    os_disk_size_gb = 1
     tags = {
       environment = "production"
       project     = "example-project"
     }
   }
   "vm4" = {
-    admin_user  = "azureuser"
-    admin_pass  = "Password1234!"
-    subnet_id   = data.azurerm_subnet.subnet.id
+    admin_username  = "azureuser"
+    admin_password  = "Password1234!"
+    subnet_id   = "prod-subnet"
     vm_size     = "Standard_D2s_v3"
+    os_disk_size_gb = 1
     tags = {
       environment = "production"
       project     = "example-project"
